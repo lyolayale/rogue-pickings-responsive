@@ -94,9 +94,15 @@ header nav ul li a {
 .section-one {
   border-bottom: 0.5px solid #eee;
   border-top: 0.5px solid #eee;
+  margin: 8px 0;
+  padding: 8px 0;
   width: 100%;
-  padding: 0.5em 0;
-  margin: 0.5em 0;
+}
+
+.section-two {
+  border-bottom: 0.5px solid #eee;
+  margin-bottom: 8px 0;
+  padding-bottom: 8px 0;
 }
 
 .bottom-section .section-one,
@@ -159,7 +165,7 @@ footer span {
 
 /* === MEDIA QUERIES === */
 
-@media screen and (min-width: 768px) {
+@media all and (min-width: 768px) {
   p {
     font-size: 14px;
     line-height: 21px;
@@ -201,6 +207,15 @@ footer span {
   .section-two {
     border-left: 1px solid #eee;
     border-right: 1px solid #eee;
+    border-bottom: 0px solid transparent;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .section-two {
+    border-bottom: 0.5px solid #eee;
+    margin-bottom: 8px 0;
+    padding-bottom: 8px 0;
   }
 
   .section-one,
@@ -228,12 +243,17 @@ footer span {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media all and (min-width: 1200px) {
   header,
   header nav ul {
     flex-flow: row nowrap;
     justify-content: space-between;
+    gap: 0.5em;
   }
+  nav {
+    width: 40%;
+  }
+
   header h1 {
     border: 0px solid transparent;
     text-align: left;
