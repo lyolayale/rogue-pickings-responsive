@@ -1,0 +1,241 @@
+/* === GENERAL STYLES === */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+
+body,
+.container,
+header,
+.top-section,
+.bottom-section,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+}
+
+h1,
+h2,
+h3 {
+  color: black;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+h1 {
+  font-size: 1.875em;
+}
+h2 {
+  font-size: 1.125em;
+}
+h3 {
+  font-size: 0.75em;
+}
+
+/* === HEADER === */
+
+/*The widths are in a percentage!*/
+header {
+  flex-direction: column;
+  height: 100%;
+  margin: 24px auto;
+  width: 100%;
+}
+
+header h1 {
+  border-bottom: 3px solid #77a466;
+  margin: 0;
+  padding: 12px 0;
+  text-align: center;
+  width: 100%;
+}
+
+header h1 span {
+  color: #77a466;
+}
+
+/* === NAVIGATION === */
+
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  width: 30%;
+}
+header nav ul li {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.875em;
+  padding: 0 1px;
+  list-style-type: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #77a466;
+}
+
+/* === TOP AND BOTTOM SECTIONS === */
+
+/*The widths are in a percentage!*/
+
+.section-one {
+  border-bottom: 0.5px solid #eee;
+  border-top: 0.5px solid #eee;
+  width: 100%;
+  padding: 0.5em 0;
+  margin: 0.5em 0;
+}
+
+.bottom-section .section-one,
+.bottom-section .section-two,
+.bottom-section .section-three {
+  justify-content: left;
+  width: 100%;
+}
+
+.bottom-section .main-image {
+  height: auto;
+}
+
+/* === MAIN SECTION === */
+.main-image img {
+  width: 100%;
+  border-bottom: 3px solid #77a466;
+}
+
+.main-title {
+  height: auto;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+.menu li {
+  padding: 10px 0;
+  color: #77a466;
+}
+
+.reviews {
+  color: #333;
+  font-size: 1em;
+  line-height: 21px;
+}
+
+.address {
+  font-size: 1em;
+  line-height: 24px;
+}
+
+/* === FOOTER === */
+
+/*The widths are in a percentage!*/
+footer {
+  height: 50px;
+  border-top: 3px solid #eee;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+footer span {
+  font-family: "Galada", cursive;
+  text-transform: lowercase;
+  color: #77a466;
+  font-size: 14px;
+}
+
+/* === MEDIA QUERIES === */
+
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0 30px;
+  }
+
+  header nav ul {
+    gap: 2em;
+  }
+
+  /* === TOP SECTION === */
+
+  .main-title h2 {
+    text-align: left;
+    padding: 5px 0;
+    color: #77a466;
+  }
+
+  .main-title p {
+    padding: 0;
+    font-size: 1em;
+    line-height: 25px;
+  }
+
+  /* === BOTTOM SECTION === */
+
+  .bottom-section {
+    border-top: 1px solid #eee;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  .section-one {
+    padding: 0;
+    margin: 0;
+  }
+
+  .section-two {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+  }
+
+  .section-one,
+  .section-two,
+  .section-three {
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .section-one,
+  .section-two,
+  .section-three {
+    width: 33%;
+    height: auto;
+    border-top: 1px solid #eee;
+  }
+
+  .section-one h3 {
+    padding: 10px 0;
+  }
+
+  .section-two h3,
+  .section-three h3 {
+    padding: 10px 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header,
+  header nav ul {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  header h1 {
+    border: 0px solid transparent;
+    text-align: left;
+  }
+}
